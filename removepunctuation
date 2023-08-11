@@ -1,0 +1,9 @@
+def prep_remove_punctuation(text):
+    symbols = "،؛,][«ـ»!ًٌٍَُِّ\"#$%&()*+-./:;<=>?@[\]^_`{|}~"
+    symbols = symbols + 'abcdefghijklmnopqrstwxyz'
+    for i in symbols:
+        text = text.lower().replace('\n','').replace(i, ' ')
+    text = text.replace("'", " ")
+    text = text.replace('"', " ")
+    print('Preprocess: Remove Punctuations (done)')
+    return text
